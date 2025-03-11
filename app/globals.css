@@ -10,6 +10,13 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  
   /* Custom scrollbar styling */
   .custom-scrollbar::-webkit-scrollbar {
     width: 3px;
@@ -30,7 +37,7 @@
 
 /* Custom Utility Definitions */
 @utility bg-gradient-mesh {
-  background-image: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  background-image: url('/icons/gradient-mesh.svg');
 }
 
 @utility shadow-chart {
@@ -47,7 +54,7 @@
 }
 
 @utility bg-bank-gradient {
-  background-image: linear-gradient(135deg, #667eea, #764ba2);
+  background-image: linear-gradient(135deg, #007aff, #007aff);
 }
 
 @utility shadow-creditCard {
@@ -152,6 +159,9 @@
 @utility input-class {
   @apply text-16 placeholder:text-16 rounded-lg border border-gray-300 text-gray-900 placeholder:text-gray-500;
 }
+@utility sheet-content-button {
+    @apply focus:ring-0 focus-visible:ring-transparent focus:ring-offset-0 focus-visible:ring-offset-0 focus-visible:outline-none focus-visible:border-none;
+  }
 @utility text14_padding10 {
   @apply text-14 px-4 py-2.5 font-semibold;
 }
@@ -199,7 +209,7 @@
 
 /* Right sidebar */
 @utility right-sidebar {
-  @apply hidden h-screen max-h-screen flex-col border-l border-gray-200 xl:flex w-[355px] xl:overflow-y-scroll;
+  @apply  hidden h-screen max-h-screen flex-col border-l border-gray-200 xl:flex w-[355px] xl:overflow-y-scroll;
 }
 @utility profile-banner {
   @apply h-[120px] w-full bg-gradient-mesh bg-cover bg-no-repeat;
@@ -208,7 +218,7 @@
   @apply relative flex px-6 max-xl:justify-center;
 }
 @utility profile-img {
-  @apply flex-center absolute -top-8 size-24 rounded-full bg-gray-100 border-8 border-white p-2 shadow-profile;
+  @apply flex-center absolute -top-8 size-28 rounded-full bg-gray-100 border-8 border-white p-2 shadow-profile;
 }
 @utility profile-details {
   @apply flex flex-col pt-24;
@@ -374,16 +384,16 @@
 
 /* Sidebar */
 @utility sidebar {
-  @apply sticky left-0 top-0 flex h-screen w-fit flex-col justify-between border-r border-gray-200 bg-white pt-8 text-white;
+  @apply sticky left-0 top-0 flex h-screen w-fit flex-col justify-between border-r border-gray-200 bg-white pt-8 text-white max-md:hidden sm:p-4 xl:p-6 2xl:w-[355px];
 }
 @utility sidebar-logo {
-  @apply 2xl:text-26 font-ibm-plex-serif text-[26px] font-bold text-black-1;
+  @apply 2xl:text-26 font-ibm-plex-serif text-[26px] font-bold text-black-1 max-xl:hidden;
 }
 @utility sidebar-link {
   @apply flex gap-3 items-center py-1 md:p-3 2xl:p-4 rounded-lg justify-center xl:justify-start;
 }
 @utility sidebar-label {
-  @apply text-16 font-semibold text-black-2;
+  @apply text-16 font-semibold text-black-2 max-xl:hidden;
 }
 
 /* Compound selectors */
