@@ -16,7 +16,7 @@
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
   }
-  
+
   /* Custom scrollbar styling */
   .custom-scrollbar::-webkit-scrollbar {
     width: 3px;
@@ -37,12 +37,13 @@
 
 /* Custom Utility Definitions */
 @utility bg-gradient-mesh {
-  background-image: url('/icons/gradient-mesh.svg');
+  background-image: url("/icons/gradient-mesh.svg");
 }
 
 @utility shadow-chart {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 @utility shadow-profile {
@@ -109,7 +110,7 @@
 
 /* Custom font family utility */
 @utility font-ibm-plex-serif {
-  font-family: 'IBM Plex Serif', serif;
+  font-family: "IBM Plex Serif", serif;
 }
 
 /* Define custom text color utility for text-black-1 */
@@ -121,7 +122,6 @@
 @utility text-black-2 {
   color: #111111;
 }
-
 
 /* Text size utilities */
 @utility text-10 {
@@ -160,8 +160,8 @@
   @apply text-16 placeholder:text-16 rounded-lg border border-gray-300 text-gray-900 placeholder:text-gray-500;
 }
 @utility sheet-content-button {
-    @apply focus:ring-0 focus-visible:ring-transparent focus:ring-offset-0 focus-visible:ring-offset-0 focus-visible:outline-none focus-visible:border-none;
-  }
+  @apply focus:ring-0 focus-visible:ring-transparent focus:ring-offset-0 focus-visible:ring-offset-0 focus-visible:outline-none focus-visible:border-none;
+}
 @utility text14_padding10 {
   @apply text-14 px-4 py-2.5 font-semibold;
 }
@@ -209,7 +209,7 @@
 
 /* Right sidebar */
 @utility right-sidebar {
-  @apply  hidden h-screen max-h-screen flex-col border-l border-gray-200 xl:flex w-[355px] xl:overflow-y-scroll;
+  @apply hidden h-screen max-h-screen flex-col border-l border-gray-200 xl:flex w-[355px] xl:overflow-y-scroll;
 }
 @utility profile-banner {
   @apply h-[120px] w-full bg-gradient-mesh bg-cover bg-no-repeat;
@@ -364,10 +364,10 @@
   @apply flex cursor-pointer items-center justify-between gap-2 py-6;
 }
 @utility footer_name {
-  @apply flex size-10 items-center justify-center rounded-full bg-gray-200;
+  @apply flex size-10 items-center justify-center rounded-full bg-gray-200 max-xl:hidden;
 }
 @utility footer_email {
-  @apply flex flex-1 flex-col justify-center;
+  @apply flex flex-1 flex-col justify-center max-xl:hidden;
 }
 @utility footer_name-mobile {
   @apply flex size-10 items-center justify-center rounded-full bg-gray-200;
@@ -376,11 +376,10 @@
   @apply flex flex-1 flex-col justify-center;
 }
 @utility footer_image {
-  @apply relative size-5;
+  @apply relative w-8 h-8 max-xl:w-full max-xl:flex max-xl:justify-center max-xl:items-center;
 }
-@utility footer_image-mobile {
-  @apply relative size-5;
-}
+
+
 
 /* Sidebar */
 @utility sidebar {
